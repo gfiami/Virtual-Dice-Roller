@@ -79,8 +79,18 @@ function addToCurrentDice(){
     for(i=0;i<diceToRoll;i++){
         sum += Math.floor(Math.random() * valueSides) + 1;
     }
-    currentDice.innerHTML = `Rolling ${diceToRoll} dice ${valueSides} sided <br>`
-    currentDice.innerHTML += `Total: ${sum}`
+    let totalWithModifier;
+    switch(modifierOperator){
+        case '+':
+            totalWithModifier = parseInt(sum) + parseInt(modifierValue);
+            break;
+        case '-':
+            totalWithModifier = parseInt(sum) - parseInt(modifierValue);
+            break;
+    }
+    currentDice.innerHTML = `Dice: ${diceToRoll}  <br> Sides: ${valueSides} <br>`
+    currentDice.innerHTML += `Modifier: ${modifierOperator} ${modifierValue} <br>`
+    currentDice.innerHTML += `Total: ${sum} ${modifierOperator} ${modifierValue} = ${totalWithModifier }`;
 
 }
 
@@ -116,13 +126,22 @@ function changeDice(dice){
     
 }
 
-
+let modifierOperator = '+';
+const buttonsModifier = document.querySelectorAll(".modifier");
 function operatorMod(element, operator){
-    
+    buttonsModifier.forEach(buttonSign => {
+        buttonSign.style.backgroundColor = 'white';
+        buttonSign.style.color = 'black';
+        
+    });
+    element.style.backgroundColor = 'rgb(133, 43, 8)';
+    element.style.color = 'white';
     switch(operator){
         case '+':
+            modifierOperator = '+'
             break;
         case '-':
+            modifierOperator = '-';
             break;
     }
 }

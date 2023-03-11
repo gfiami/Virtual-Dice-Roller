@@ -68,12 +68,13 @@ input[type=number] {
   border-radius: 2%;
 }
 .modifier{
-  font-weight:800;
-  padding: 10px;
+  font-weight: 800;
+  margin: 10px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
   border: 1px solid rgb(104, 93, 93);
-  border-radius: 100%;
-  box-shadow: none;
-  margin: 12px;
+  
 }
 img{
   width: 100%;
@@ -120,9 +121,12 @@ img{
 .title{
     text-align: center;
     color: white;
-    text-shadow: 1px 1px 2px rgb(29, 3, 3), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(4, 4, 26);
+    text-shadow: 1px 1px 2px rgb(29, 3, 3), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(26, 10, 4);
 }
-
+.startModifier{
+  background-color: rgb(133, 43, 8);
+    color: white;
+}
 body {
   background: url('./assets/diceBackground.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
