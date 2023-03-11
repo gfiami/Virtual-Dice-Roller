@@ -19,6 +19,10 @@ input[type=number] {
   font-size: 24px;
   margin: 12px 0px;
 }
+.startDice{
+  border: 1px solid gray;
+  border-radius: 50%;
+}
 .addDice{
   font-weight:800;
   padding: 15px;
@@ -63,6 +67,14 @@ input[type=number] {
   border: solid 3px rgb(104, 93, 93);
   border-radius: 2%;
 }
+.modifier{
+  font-weight:800;
+  padding: 10px;
+  border: 1px solid rgb(104, 93, 93);
+  border-radius: 100%;
+  box-shadow: none;
+  margin: 12px;
+}
 img{
   width: 100%;
   height: 100%;
@@ -83,6 +95,9 @@ img{
     height: 30px;
     padding: 3px;
     text-align: center;
+}
+.numberOfModifier{
+  width: 40px;
 }
 .valueDice{
   text-align: center;

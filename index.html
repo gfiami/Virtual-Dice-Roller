@@ -14,8 +14,16 @@
         <div class="messageContainer"><h3 class="message">How many dice?</h3>
             <input type='number' class='numberOfDice' value='1' min='1'></div>
 
-        <div class="messageContainer"><h3 class='message'>Any modifiers?</h3>
-            <input type='number' class='numberOfModifier' value='0' min='0'></div>
+        <div class="messageContainer">
+            <h3 class='message'>Any modifiers?</h3>
+            <input type='number' class='numberOfModifier' value='' min='0'>
+            <div class="modifierOperatorContainer">
+                <button class="modifier modifierPlus" onclick="operatorMod(this, '+')"> + </button>
+                <button class="modifier modifierMinus" onclick="operatorMod(this, '-')"> - </button>
+            </div>
+        </div>
+            
+
         </div>
     <h3 class="message">Select number of sides</h3>
     <div class="numberOfSidesContainer">
@@ -30,7 +38,7 @@
 
         <div class="imageValueContainer">
             <p class="valueDice">6</p>
-            <img src="./assets/d6_blank.png" class='diceElement'onclick='changeDice(this)' value="6" alt="">
+            <img src="./assets/d6_blank.png" class='diceElement startDice'onclick='changeDice(this)' value="6" alt="">
         </div>
         <div class="imageValueContainer">
             <p class="valueDice">8</p>
