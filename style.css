@@ -17,6 +17,7 @@ input[type=number] {
 }
 .message{
   font-size: 24px;
+  margin: 12px 0px;
 }
 .addDice{
   font-weight:800;
@@ -24,6 +25,7 @@ input[type=number] {
   border: 1px solid rgb(104, 93, 93);
   border-radius: 50%;
   box-shadow: none;
+  margin: 12px;
 }
 .addDice:hover{  
     background-color: #555555;
@@ -39,8 +41,7 @@ input[type=number] {
   align-items: center;
   width: 30%;
   min-width: 300px;
-  min-height: 300px;
-  padding: 20px;
+  padding: 15px;
   margin: auto;
   background-color: white;
   margin-bottom: 5%;
@@ -55,7 +56,7 @@ input[type=number] {
   width: 15%;
   min-width: 100px;
   min-height: 50px;
-  padding: 20px;
+  padding: 15px;
   margin: auto;
   background-color: white;
   margin-bottom: 5%;
@@ -95,6 +96,7 @@ img{
 
 .title{
     text-align: center;
+    text-shadow: 1px 1px 2px rgb(29, 3, 3), 0 0 1em rgb(0, 0, 0), 0 0 0.2em rgb(4, 4, 26);
 }
 
 body {
