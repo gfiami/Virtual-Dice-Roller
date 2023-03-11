@@ -8,8 +8,14 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <h1 class="title">Virtual Dice Roller</h1>
 <div class="dicesInputContainer">
-
+    <h3 class="message">How many dice?</h3>
+    <input type='number' class='numberOfDice' value='1' min='1'>
+    <h3 class="message">Select number of sides</h3>
+    <input type='number'class='numberOfSides' value='1' min='1'>
+    <br>
+    <input type='button' onclick='addToCurrentDice()'class='addDice'value='Roll'>
 </div>
 <div class="currentDice">
 

@@ -1,3 +1,7 @@
+  @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300&display=swap');
+  *{
+    font-family: 'Roboto Slab', serif;
+  }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
@@ -8,6 +12,35 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+.addDice{
+  padding: 15px;
+  border: 1px solid rgb(104, 93, 93);
+  border-radius: 50%;
+  box-shadow: none;
+}
+.addDice:hover{  
+    background-color: #555555;
+    color: white;
+}
+.addDice:active{
+  color:rgb(1, 1, 15);
+}
+.dicesInputContainer{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 20%;
+  min-width: 300px;
+  min-height: 300px;
+  padding: 20px;
+  margin: auto;
+  background-color: white;
+  margin-bottom: 5%;
+  border: solid 3px rgb(104, 93, 93);
+  border-radius: 2%;
 }
 
 .numberOfDice{
@@ -23,3 +56,16 @@ input[type=number] {
     padding: 3px;
     text-align: center;
 }
+
+.title{
+    text-align: center;
+}
+
+body {
+  background: url('./assets/diceBackground.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+  

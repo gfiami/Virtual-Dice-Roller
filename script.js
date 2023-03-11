@@ -1,7 +1,3 @@
-const diceContainer = document.querySelector('.dicesInputContainer');
-const newDice = "Roll <input type='number' class='numberOfDice' value='1' min='1'> dice with <input type='number'class='numberOfSides' value='1' min='1'> sides <input type='button' onclick='addToCurrentDice()'class='addDice'value='Roll'> <br> <br>"
-diceContainer.innerHTML = newDice;
-
 let numbersToRoll = document.querySelector('.numberOfDice');
 let diceToRoll = 1
 numbersToRoll.addEventListener("input", (event)=>{
@@ -27,7 +23,6 @@ numbersToRoll.addEventListener("keydown", (event)=>{
 let sidesOfDice = document.querySelector('.numberOfSides');
 let valueSides = 1
 sidesOfDice.addEventListener("input", (event) =>{
-    preventCtrlKey();
     checkInputType(event.data);
     valueSides = sidesOfDice.value;
     if(sidesOfDice.value.length > 3){
