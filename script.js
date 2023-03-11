@@ -20,8 +20,10 @@ numbersToRoll.addEventListener("keydown", (event)=>{
             }, 100);
     }})
 
+let valueSides = 6;
+
+/* USEFUL FOR CUSTOM INPUTS ONLY
 let sidesOfDice = document.querySelector('.numberOfSides');
-let valueSides = 1
 sidesOfDice.addEventListener("input", (event) =>{
     checkInputType(event.data);
     valueSides = sidesOfDice.value;
@@ -41,7 +43,7 @@ sidesOfDice.addEventListener("keydown", (event)=>{
 
             }, 100);
     }})
-
+*/
 const currentDice = document.querySelector('.currentDice');
 function addToCurrentDice(){
     currentDice.innerHTML = "";
@@ -50,7 +52,7 @@ function addToCurrentDice(){
     for(i=0;i<diceToRoll;i++){
         sum += Math.floor(Math.random() * valueSides) + 1;
     }
-    currentDice.innerHTML = `Rolling ${diceToRoll} dice ${valueSides} sided... <br>`
+    currentDice.innerHTML = `Rolling ${diceToRoll} dice ${valueSides} sided <br>`
     currentDice.innerHTML += `Total: ${sum}`
 
 }
@@ -62,3 +64,15 @@ function checkInputType(input){
     }
 }
 
+let dicesSelector = document.querySelectorAll('.diceElement');
+
+
+function changeDice(dice){
+    dicesSelector.forEach(element => {
+        element.style.border = "none"
+    });
+    valueSides = dice.getAttribute('value');
+    dice.style.border = "1px solid gray"
+    dice.style.borderRadius = "50%"
+    
+}

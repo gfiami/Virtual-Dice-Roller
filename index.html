@@ -11,9 +11,40 @@
     <h1 class="title">Virtual Dice Roller</h1>
 <div class="dicesInputContainer">
     <h3 class="message">How many dice?</h3>
-    <input type='number' class='numberOfDice' value='1' min='1'>
+    <input type='number' class='numberOfDice' value='1' min='1'><br>
     <h3 class="message">Select number of sides</h3>
-    <input type='number'class='numberOfSides' value='1' min='1'>
+    <div class="numberOfSidesContainer">
+        <div class="imageValueContainer">
+            <p class="valueDice">2</p>
+            <img src="./assets/d4_blank.png" class='diceElement'onclick='changeDice(this)' value="2" alt="">
+        </div>
+        <div class="imageValueContainer">
+            <p class="valueDice">4</p>
+            <img src="./assets/d4_blank.png" class='diceElement'onclick='changeDice(this)' value="4"alt="">
+        </div>
+
+        <div class="imageValueContainer">
+            <p class="valueDice">6</p>
+            <img src="./assets/d6_blank.png" class='diceElement'onclick='changeDice(this)' value="6" alt="">
+        </div>
+        <div class="imageValueContainer">
+            <p class="valueDice">8</p>
+            <img src="./assets/d8_blank.png" class='diceElement'onclick='changeDice(this)' value="8" alt="">
+        </div>
+        <div class="imageValueContainer">
+            <p class="valueDice">10</p>
+            <img src="./assets/d10_blank.png" class='diceElement' onclick='changeDice(this)' value="10" alt="">
+        </div>
+        <div class="imageValueContainer">
+            <p class="valueDice">12</p>
+            <img src="./assets/d12_blank.png" class='diceElement' onclick='changeDice(this)'value="12" alt="">
+        </div>
+        <div class="imageValueContainer">
+            <p class="valueDice">20</p>
+            <img src="./assets/d20_blank.png" class='diceElement'onclick='changeDice(this)'value="20" alt="">
+        </div>
+    </div>
+    <input hidden type='number'class='numberOfSides' value='6' min='1'>
     <br>
     <input type='button' onclick='addToCurrentDice()'class='addDice'value='Roll'>
 </div>
