@@ -5,6 +5,7 @@ diceContainer.innerHTML = newDice;
 let numbersToRoll = document.querySelector('.numberOfDice');
 let diceToRoll = 1
 numbersToRoll.addEventListener("input", (event)=>{
+    checkInputType(event.data);
     diceToRoll = numbersToRoll.value
     if(numbersToRoll.value.length > 4){
         numbersToRoll.value = ""
@@ -14,10 +15,20 @@ numbersToRoll.addEventListener("input", (event)=>{
         diceToRoll = numbersToRoll.value
     }
     });
+numbersToRoll.addEventListener("keydown", (event)=>{
+    //PREVENT CONTRL C CONTROL V
+    if(event.key == 'Control' || event.key == 'C' || event.key == 'c' || event.key == 'V' || event.key == 'v'){
+        setTimeout(() => {
+        numbersToRoll.value = ""
+
+            }, 100);
+    }})
 
 let sidesOfDice = document.querySelector('.numberOfSides');
 let valueSides = 1
 sidesOfDice.addEventListener("input", (event) =>{
+    preventCtrlKey();
+    checkInputType(event.data);
     valueSides = sidesOfDice.value;
     if(sidesOfDice.value.length > 3){
         sidesOfDice.value = ""
@@ -27,6 +38,14 @@ sidesOfDice.addEventListener("input", (event) =>{
         valueSides = sidesOfDice.value;
     }
 })
+sidesOfDice.addEventListener("keydown", (event)=>{
+    //PREVENT CONTRL C CONTROL V
+    if(event.key == 'Control' || event.key == 'C' || event.key == 'c' || event.key == 'V' || event.key == 'v'){
+        setTimeout(() => {
+            sidesOfDice.value = ""
+
+            }, 100);
+    }})
 
 const currentDice = document.querySelector('.currentDice');
 function addToCurrentDice(){
@@ -35,9 +54,16 @@ function addToCurrentDice(){
 
     for(i=0;i<diceToRoll;i++){
         sum += Math.floor(Math.random() * valueSides) + 1;
-        console.log(sum);
     }
     currentDice.innerHTML = `Rolling ${diceToRoll} dice ${valueSides} sided... <br>`
     currentDice.innerHTML += `Total: ${sum}`
 
 }
+
+
+function checkInputType(input){
+    if(isNaN(input)){
+        numbersToRoll.value = ""
+    }
+}
+
